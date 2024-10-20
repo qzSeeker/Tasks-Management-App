@@ -31,7 +31,7 @@ Before running this project, make sure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/task-management-app.git
+git clone https://github.com/qzSeeker/task-management-app.git
 ```
 
 2. Navigate to the project directory:
