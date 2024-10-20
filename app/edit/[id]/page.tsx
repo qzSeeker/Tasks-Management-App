@@ -56,40 +56,49 @@ export default function EditTaskPage({ params }: EditTaskPageProps) {
         <div className='w-full h-[36rem] flex flex-col justify-center items-center'>
             {/* <div className='w-[80%]'> */}
                 <form onSubmit={handleSubmit}
-                    className='mt-10 bg-white/10 md:w-[60%] w-[80%] h-max p-4 flex flex-col gap-3 rounded shadow-lg'
+                    className='mt-10 bg-white/10 md:w-[60%] w-[80%] h-max p-3 flex flex-col gap-3 rounded shadow-lg'
                 >
-                    <div className="flex flex-col gap-5 bg-[#171717] px-3 py-2 rounded">
-                    <div className="w-full flex justify-between items-center">
-                    <label htmlFor="title" className="">Title</label>
+                    <div className="flex flex-col gap-5 bg-[#171717] p-4 rounded">
+                    <div className="w-full flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between items-center">
+                    <label htmlFor="title" className="font-semibold">Title</label>
                     <input id='title' value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" 
-                        className="px-3 py-2 w-[50%] text-sm bg-transparent border-white/10 border-2 rounded outline-none"
+                        className="px-3 py-2 w-[80%] sm:w-[50%] text-sm bg-transparent border-white/10 border-2 rounded outline-none"
                     />
                     </div>
 
-                    <div className="flex justify-between w-full items-center">
-                    <label htmlFor="description">Description</label>
+                    <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between w-full items-center">
+                    <label htmlFor="description" className='font-semibold'>Description</label>
                     <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description"
                         id='description'
-                        className="px-3 w-[50%] py-2 text-sm bg-transparent border-white/10 border-2 rounded outline-none"
+                        className="px-3 w-[80%] sm:w-[50%] py-2 text-sm bg-transparent border-white/10 border-2 rounded outline-none"
                     />
                     </div>
 
-                    <div className='flex justify-between w-full items-center'>
-                    <label htmlFor="priority">Priority</label>
+                    <div className='flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between w-full items-center'>
+                    <label htmlFor="priority" className='font-semibold'>Priority</label>
                     <select
                         id='priority'
-                        className="flex items-center justify-around gap-3 w-[50%] bg-white/10 px-3 py-2 rounded outline-none"
+                        className="flex items-center justify-around gap-3 w-[80%] sm:w-[50%] bg-white/10 px-3 py-2 rounded outline-none"
                         value={priority} onChange={(e) => setPriority(e.target.value as 'low' | 'medium' | 'high')}>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
+                        <option value="low" style={{backgroundColor: "#171717", color: 'white'}}>Low</option>
+                        <option value="medium" style={{backgroundColor: "#171717", color: 'white'}}>Medium</option>
+                        <option value="high" style={{backgroundColor: "#171717", color: 'white'}}>High</option>
                     </select>
                     </div>
-                    <button type="submit"
-                        className="bg-white/10 mt-8 text-white px-3 py-2 border-solid border-white border-b-4 border-r-4 text-sm shadow-2xl rounded"
-                    >
-                    Update Task
-                    </button>
+                    <div className="flex sm:justify-end justify-center items-center mt-5 gap-6">
+                        <button 
+                                type="button" 
+                                onClick={() => router.push('/')}
+                                className="bg-white/10 transition-all ease-in hover:bg-red-500 hover:text-white text-red-500 px-3 py-2 border-solid border-red-500 border-b-4 border-r-4 text-sm shadow-2xl rounded"
+                            >
+                                Cancel
+                        </button>
+                        <button type="submit"
+                            className="bg-white/10 hover:bg-green-500 hover:text-white transition-all ease-in mt-8 text-green-500 px-3 py-2 border-solid border-green-500 border-b-4 border-r-4 text-sm shadow-2xl rounded"
+                        >
+                            Update Task
+                        </button>
+                    </div>
                     </div>
                 </form>
             {/* </div> */}

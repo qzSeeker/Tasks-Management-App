@@ -24,7 +24,7 @@ export default function Home() {
 }, []);
 
   return (
-    <div className="h-full w-full flex justify-center">
+    <div className="h-max w-full flex justify-center">
       <Suspense fallback={<LoadingSkeleton />}>
         <TaskList tasks={tasks} setTasks={setTasks}/>
       </Suspense>

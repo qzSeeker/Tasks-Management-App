@@ -33,7 +33,7 @@ export default function RootLayout({
         <NavBar/>
         <main>{children}</main>
         {/* footer */}
-        <div className="absolute bottom-10 flex justify-center items-center w-full text-sm">
+        <div className="text-center h-[8rem] flex justify-center items-center text-sm">
           Developed & Designed with ❤️ by Arpit Yadav
         </div>
       </body>

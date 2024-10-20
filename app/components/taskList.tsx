@@ -97,12 +97,12 @@ export default function TaskList({ tasks }: TaskListProps) {
                             <button onClick={() => setFilter('completed')} className="px-2 py-1 mx-1 bg-yellow-500 text-white rounded">Completed</button>
                         </div>
                     </div>
-                <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
+                <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-20">
                     {sortedTasks.map((task) => (
                         <div key={task.id} className={`bg-white/10 p-6 rounded`}>
                                 <div className="flex justify-between items-center">
                                     <h2 className={`font-semibold text-lg`}>{task.title}</h2>
-                                    <span className={`py-1 px-2 rounded ${getPriorityColor(
+                                    <span className={`py-1 px-2 rounded uppercase text-xs font-semibold ${getPriorityColor(
                                         task.priority
                                     )}`}>
                                         {task.priority}
