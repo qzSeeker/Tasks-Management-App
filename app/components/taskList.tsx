@@ -81,14 +81,14 @@ export default function TaskList({ tasks }: TaskListProps) {
             {/* Tasks */}
             <div className="w-[80%] h-full">
                 <div className="flex flex-col justify-center items-center mt-8">
-                    <div className=" flex justify-between w-full">
+                    <div className="flex flex-wrap justify-between items-center w-full">
                     {/* Search Bar */}
                         <input
                             type="text"
                             placeholder="Search tasks..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="p-2 mb-4 px-3 py-2 w-[50%] text-sm bg-white/10 border-white/10 border-2 rounded outline-none"
+                            className="p-2 mb-4 px-3 py-2 md:w-[50%] w-full text-sm bg-white/10 border-white/10 border-2 rounded outline-none"
                         />
                     {/* Filter Buttons */}
                         <div className="mb-4 flex">
