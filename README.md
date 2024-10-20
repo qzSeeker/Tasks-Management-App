@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Management Application
 
-## Getting Started
+A modern task management web application built with Next.js, TypeScript, and Tailwind CSS. This application helps users organize their tasks with features for creating, editing, deleting, and tracking task completion status, along with priority management.
 
-First, run the development server:
+## Features
 
+- ✨ Create new tasks with title and description
+- 🎯 Set task priority (Low, Medium, High)
+- 📝 Edit existing tasks
+- 🗑️ Delete tasks
+- ✅ Mark tasks as complete/incomplete
+- 🔍 Search functionality to filter tasks
+- 💻 Responsive design for all devices
+- 🎨 Modern UI with Tailwind CSS
+- 🔒 Type-safe development with TypeScript
+
+## Tech Stack
+
+- **Frontend Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Development Mode**: Create Next App
+
+## Prerequisites
+
+Before running this project, make sure you have the following installed:
+- Node.js (v14 or higher)
+- npm or yarn package manager
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/task-management-app.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd task-management-app
+```
+
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Adding a Task**:
+   - Click the "Add Task" button
+   - Fill in the task title and description
+   - Select priority level (Low/Medium/High)
+   - Click "Save" to create the task
 
-## Learn More
+2. **Setting Task Priority**:
+   - Choose priority when creating a task
+   - Update priority level when editing a task
+   - Tasks are visually marked based on priority levels:
+     - High: Red indicator
+     - Medium: Yellow indicator
+     - Low: Green indicator
 
-To learn more about Next.js, take a look at the following resources:
+3. **Editing a Task**:
+   - Click the edit icon on any task
+   - Modify the task details and priority
+   - Save your changes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Completing a Task**:
+   - Click the checkbox next to any task to mark it as complete/incomplete
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Deleting a Task**:
+   - Click the delete icon to remove a task
 
-## Deploy on Vercel
+6. **Searching Tasks**:
+   - Use the search bar to filter tasks by title or description
+   - Tasks can be filtered by priority level
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Update the UI'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+Your Name - [arpityadavay2005@gmail.com](mailto:arpityadavay2005@gmail.com)
+
+Project Link: [https://tasks-management-app-gray.vercel.app/](https://tasks-management-app-gray.vercel.app/)
