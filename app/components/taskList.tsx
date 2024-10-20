@@ -17,7 +17,7 @@ interface Task {
     completed: boolean;
 }
 
-export default function TaskList({ tasks, setTasks }: TaskListProps) {
+export default function TaskList({ tasks }: TaskListProps) {
     const [taskList, setTaskList] = useState<Task[]>(tasks);
     const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
     const [search, setSearch] = useState('');

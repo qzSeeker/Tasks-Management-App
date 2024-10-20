@@ -1,4 +1,3 @@
-// app/edit/[id]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -12,7 +11,13 @@ interface Task {
     completed: boolean;
 }
 
-export default function EditTaskPage({ params }) {
+interface EditTaskPageProps {
+    params: {
+        id: string;
+    };
+}
+
+export default function EditTaskPage({ params }: EditTaskPageProps) {
     const router = useRouter();
     const [task, setTask] = useState<Task | null>(null);
     const [title, setTitle] = useState('');
@@ -20,6 +25,8 @@ export default function EditTaskPage({ params }) {
     const [priority, setPriority] = useState<'low' | 'medium' | 'high'>('low');
 
     useEffect(() => {
+        if (!params?.id) return;
+
         const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
         const foundTask = tasks.find((t: Task) => t.id === params.id);
         if (foundTask) {
@@ -32,9 +39,13 @@ export default function EditTaskPage({ params }) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!task) return;
+
         const updatedTask = { ...task, title, description, priority };
         const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
-        const updatedTasks = tasks.map(t => (t.id === task.id ? updatedTask : t));
+        const updatedTasks = tasks.map((t: Task) => (t.id === task.id ? updatedTask : t));
+
         localStorage.setItem('tasks', JSON.stringify(updatedTasks));
         router.push('/');
     };
