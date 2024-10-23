@@ -102,4 +102,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Your Name - [arpityadavay2005@gmail.com](mailto:arpityadavay2005@gmail.com)
 
-Project Link: [https://tasks-management-app-gray.vercel.app/](https://tasks-management-app-gray.vercel.app/)
+Project Link: [https://tasks-management-app-gray.vercel.app/](https://qzseeker-taskflow.vercel.app/)
